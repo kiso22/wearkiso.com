@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wearKISO - Premium T-Shirts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-size: 14px; /* Smaller font size */
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-96" style="background-image: url('https://source.unsplash.com/1600x600/?fashion,tshirt');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+      <h1 class="text-white text-4xl font-bold">wearKISO</h1>
+      <p class="text-white mt-2">Minimal. Modern. Made for You.</p>
+      <a href="#gallery" class="mt-4 bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-100">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="p-6 bg-white text-center">
+    <h2 class="text-2xl font-semibold mb-2">About wearKISO</h2>
+    <p>wearKISO is a premium minimalist T-shirt brand designed for modern India. Crafted with comfort, style, and sustainability in mind, we bring you tees that elevate your everyday wear.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="p-6">
+    <h2 class="text-xl font-semibold mb-4 text-center">Explore Our Collection</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Repeat Product Cards -->
+      <!-- Use JS to dynamically add or hardcode cards below -->
+      <script>
+        const products = [
+          { name: "Classic Black Tee", price: 699, img: "https://source.unsplash.com/400x400/?tshirt,black" },
+          { name: "White Cotton Tee", price: 599, img: "https://source.unsplash.com/400x400/?tshirt,white" },
+          { name: "Navy Blue Tee", price: 649, img: "https://source.unsplash.com/400x400/?tshirt,blue" },
+          { name: "Olive Green Tee", price: 649, img: "https://source.unsplash.com/400x400/?tshirt,green" },
+          { name: "Urban Grey Tee", price: 699, img: "https://source.unsplash.com/400x400/?tshirt,grey" },
+          { name: "Premium Maroon Tee", price: 749, img: "https://source.unsplash.com/400x400/?tshirt,maroon" },
+          { name: "Charcoal Slim Fit", price: 799, img: "https://source.unsplash.com/400x400/?tshirt,charcoal" },
+        ];
+
+        document.write(products.map((p, i) => `
+          <div class="bg-white p-4 shadow rounded">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-56 object-cover rounded">
+            <h3 class="mt-2 text-lg font-semibold">${p.name}</h3>
+            <p class="text-gray-600">₹${p.price}</p>
+            <label class="block mt-2">Size:
+              <select class="w-full border p-1 rounded">
+                <option>Small</option><option>Medium</option><option>Large</option><option>XL</option>
+              </select>
+            </label>
+            <label class="block mt-2">Color:
+              <select class="w-full border p-1 rounded">
+                <option>Black</option><option>White</option><option>Navy</option><option>Olive</option>
+              </select>
+            </label>
+            <button onclick="addToCart(${i})" class="mt-3 bg-gray-900 text-white px-3 py-1 rounded">Add to Cart</button>
+            <button onclick="buyNow(${i})" class="mt-2 bg-green-600 text-white px-3 py-1 rounded">Buy Now</button>
+          </div>
+        `).join(""));
+      </script>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="p-6 bg-white">
+    <h2 class="text-xl font-semibold mb-4">Your Cart</h2>
+    <ul id="cartItems" class="mb-4"></ul>
+    <p id="cartTotal" class="font-semibold">Total: ₹0</p>
+  </section>
+
+  <!-- Address Section -->
+  <section id="address" class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Delivery Address</h2>
+    <input type="text" placeholder="Full Address" class="w-full border p-2 rounded mb-2" />
+    <button onclick="goToPayment()" class="bg-blue-600 text-white px-4 py-2 rounded">Proceed to Payment</button>
+  </section>
+
+  <!-- Payment Section -->
+  <section id="payment" class="p-6 bg-white">
+    <h2 class="text-xl font-semibold mb-2">Payment Options</h2>
+    <ul class="list-disc pl-6">
+      <li>PhonePe</li>
+      <li>Google Pay</li>
+      <li>Paytm</li>
+      <li>Card Payment</li>
+      <li><span class="text-gray-400 line-through">Cash on Delivery (Coming Soon)</span></li>
+    </ul>
+  </section>
+
+  <!-- Ratings & Reviews -->
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-2">Customer Reviews</h2>
+    <div class="space-y-4">
+      <div class="p-4 bg-gray-100 rounded">
+        <p class="font-semibold">⭐⭐⭐⭐⭐ - Rohan</p>
+        <p>Excellent quality and perfect fit. Loved the olive color!</p>
+      </div>
+      <div class="p-4 bg-gray-100 rounded">
+        <p class="font-semibold">⭐⭐⭐⭐ - Neha</p>
+        <p>Super soft fabric and delivery was quick. Will buy again!</p>
+      </div>
+      <div class="p-4 bg-gray-100 rounded">
+        <p class="font-semibold">⭐⭐⭐⭐⭐ - Aryan</p>
+        <p>Minimalist and stylish. WearKISO rocks 🔥</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+    <p>📞 7671081520</p>
+    <p>📧 wearkiso@gmail.com</p>
+    <p>💬 <a href="https://wa.me/917671081520" target="_blank" class="text-blue-600 underline">Chat on WhatsApp</a></p>
+  </section>
+
+  <script>
+    const cart = [];
+
+    function addToCart(i) {
+      const product = products[i];
+      const size = document.querySelectorAll('select')[i * 2].value;
+      const color = document.querySelectorAll('select')[i * 2 + 1].value;
+      const existing = cart.find(p => p.name === product.name && p.size === size && p.color === color);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1, size, color });
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartList = document.getElementById("cartItems");
+      const totalBox = document.getElementById("cartTotal");
+      cartList.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, idx) => {
+        total += item.price * item.qty;
+        cartList.innerHTML += `
+          <li class="mb-2">
+            ${item.name} - ${item.size}, ${item.color} x ${item.qty}
+            <button onclick="removeItem(${idx})" class="text-red-500 ml-2">[Remove]</button>
+          </li>`;
+      });
+      totalBox.innerText = Total: ₹${total};
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function buyNow(i) {
+      addToCart(i);
+      document.getElementById("address").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function goToPayment() {
+      document.getElementById("payment").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+
+</html>
