@@ -1,0 +1,2384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>wearKISO - T-shirts Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-sm">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-bold mb-4">All KISO T-Shirts</h1>
+    
+<div class="flex flex-wrap gap-4 mb-6">
+  <input type="text" id="searchInput" placeholder="Search by name..." class="border rounded p-2 w-60" oninput="filterProducts()">
+  <select id="sizeFilter" class="border rounded p-2" onchange="filterProducts()">
+    <option value="">All Sizes</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+  </select>
+  <select id="colorFilter" class="border rounded p-2" onchange="filterProducts()">
+    <option value="">All Colors</option>
+    <option value="Black">Black</option>
+    <option value="White">White</option>
+    <option value="Blue">Blue</option>
+    <option value="Grey">Grey</option>
+  </select>
+</div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 1" data-size="M" data-color="White">
+  <img src="images/tshirt1.jpg" alt="T-shirt 1" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 1</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-1" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-1" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(1, document.getElementById('size-1').value, document.getElementById('color-1').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 2" data-size="L" data-color="Blue">
+  <img src="images/tshirt2.jpg" alt="T-shirt 2" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 2</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-2" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-2" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(2, document.getElementById('size-2').value, document.getElementById('color-2').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 3" data-size="XL" data-color="Grey">
+  <img src="images/tshirt3.jpg" alt="T-shirt 3" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 3</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-3" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-3" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(3, document.getElementById('size-3').value, document.getElementById('color-3').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 4" data-size="S" data-color="Black">
+  <img src="images/tshirt4.jpg" alt="T-shirt 4" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 4</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-4" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-4" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(4, document.getElementById('size-4').value, document.getElementById('color-4').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 5" data-size="M" data-color="White">
+  <img src="images/tshirt5.jpg" alt="T-shirt 5" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 5</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-5" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-5" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(5, document.getElementById('size-5').value, document.getElementById('color-5').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 6" data-size="L" data-color="Blue">
+  <img src="images/tshirt6.jpg" alt="T-shirt 6" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 6</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-6" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-6" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(6, document.getElementById('size-6').value, document.getElementById('color-6').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 7" data-size="XL" data-color="Grey">
+  <img src="images/tshirt7.jpg" alt="T-shirt 7" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 7</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-7" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-7" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(7, document.getElementById('size-7').value, document.getElementById('color-7').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 8" data-size="S" data-color="Black">
+  <img src="images/tshirt8.jpg" alt="T-shirt 8" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 8</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-8" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-8" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(8, document.getElementById('size-8').value, document.getElementById('color-8').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 9" data-size="M" data-color="White">
+  <img src="images/tshirt9.jpg" alt="T-shirt 9" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 9</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-9" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-9" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(9, document.getElementById('size-9').value, document.getElementById('color-9').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 10" data-size="L" data-color="Blue">
+  <img src="images/tshirt10.jpg" alt="T-shirt 10" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 10</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-10" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-10" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(10, document.getElementById('size-10').value, document.getElementById('color-10').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 11" data-size="XL" data-color="Grey">
+  <img src="images/tshirt11.jpg" alt="T-shirt 11" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 11</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-11" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-11" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(11, document.getElementById('size-11').value, document.getElementById('color-11').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 12" data-size="S" data-color="Black">
+  <img src="images/tshirt12.jpg" alt="T-shirt 12" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 12</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-12" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-12" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(12, document.getElementById('size-12').value, document.getElementById('color-12').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 13" data-size="M" data-color="White">
+  <img src="images/tshirt13.jpg" alt="T-shirt 13" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 13</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-13" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-13" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(13, document.getElementById('size-13').value, document.getElementById('color-13').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 14" data-size="L" data-color="Blue">
+  <img src="images/tshirt14.jpg" alt="T-shirt 14" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 14</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-14" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-14" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(14, document.getElementById('size-14').value, document.getElementById('color-14').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 15" data-size="XL" data-color="Grey">
+  <img src="images/tshirt15.jpg" alt="T-shirt 15" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 15</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-15" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-15" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(15, document.getElementById('size-15').value, document.getElementById('color-15').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 16" data-size="S" data-color="Black">
+  <img src="images/tshirt16.jpg" alt="T-shirt 16" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 16</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-16" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-16" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(16, document.getElementById('size-16').value, document.getElementById('color-16').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 17" data-size="M" data-color="White">
+  <img src="images/tshirt17.jpg" alt="T-shirt 17" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 17</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-17" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-17" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(17, document.getElementById('size-17').value, document.getElementById('color-17').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 18" data-size="L" data-color="Blue">
+  <img src="images/tshirt18.jpg" alt="T-shirt 18" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 18</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-18" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-18" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(18, document.getElementById('size-18').value, document.getElementById('color-18').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 19" data-size="XL" data-color="Grey">
+  <img src="images/tshirt19.jpg" alt="T-shirt 19" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 19</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-19" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-19" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(19, document.getElementById('size-19').value, document.getElementById('color-19').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 20" data-size="S" data-color="Black">
+  <img src="images/tshirt20.jpg" alt="T-shirt 20" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 20</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-20" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-20" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(20, document.getElementById('size-20').value, document.getElementById('color-20').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 21" data-size="M" data-color="White">
+  <img src="images/tshirt21.jpg" alt="T-shirt 21" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 21</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-21" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-21" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(21, document.getElementById('size-21').value, document.getElementById('color-21').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 22" data-size="L" data-color="Blue">
+  <img src="images/tshirt22.jpg" alt="T-shirt 22" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 22</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-22" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-22" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(22, document.getElementById('size-22').value, document.getElementById('color-22').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 23" data-size="XL" data-color="Grey">
+  <img src="images/tshirt23.jpg" alt="T-shirt 23" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 23</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-23" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-23" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(23, document.getElementById('size-23').value, document.getElementById('color-23').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 24" data-size="S" data-color="Black">
+  <img src="images/tshirt24.jpg" alt="T-shirt 24" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 24</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-24" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-24" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(24, document.getElementById('size-24').value, document.getElementById('color-24').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 25" data-size="M" data-color="White">
+  <img src="images/tshirt25.jpg" alt="T-shirt 25" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 25</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-25" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-25" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(25, document.getElementById('size-25').value, document.getElementById('color-25').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 26" data-size="L" data-color="Blue">
+  <img src="images/tshirt26.jpg" alt="T-shirt 26" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 26</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-26" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-26" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(26, document.getElementById('size-26').value, document.getElementById('color-26').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 27" data-size="XL" data-color="Grey">
+  <img src="images/tshirt27.jpg" alt="T-shirt 27" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 27</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-27" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-27" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(27, document.getElementById('size-27').value, document.getElementById('color-27').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 28" data-size="S" data-color="Black">
+  <img src="images/tshirt28.jpg" alt="T-shirt 28" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 28</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-28" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-28" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(28, document.getElementById('size-28').value, document.getElementById('color-28').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 29" data-size="M" data-color="White">
+  <img src="images/tshirt29.jpg" alt="T-shirt 29" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 29</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-29" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-29" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(29, document.getElementById('size-29').value, document.getElementById('color-29').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 30" data-size="L" data-color="Blue">
+  <img src="images/tshirt30.jpg" alt="T-shirt 30" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 30</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-30" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-30" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(30, document.getElementById('size-30').value, document.getElementById('color-30').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 31" data-size="XL" data-color="Grey">
+  <img src="images/tshirt31.jpg" alt="T-shirt 31" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 31</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-31" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-31" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(31, document.getElementById('size-31').value, document.getElementById('color-31').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 32" data-size="S" data-color="Black">
+  <img src="images/tshirt32.jpg" alt="T-shirt 32" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 32</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-32" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-32" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(32, document.getElementById('size-32').value, document.getElementById('color-32').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 33" data-size="M" data-color="White">
+  <img src="images/tshirt33.jpg" alt="T-shirt 33" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 33</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-33" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-33" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(33, document.getElementById('size-33').value, document.getElementById('color-33').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 34" data-size="L" data-color="Blue">
+  <img src="images/tshirt34.jpg" alt="T-shirt 34" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 34</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-34" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-34" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(34, document.getElementById('size-34').value, document.getElementById('color-34').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 35" data-size="XL" data-color="Grey">
+  <img src="images/tshirt35.jpg" alt="T-shirt 35" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 35</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-35" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-35" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(35, document.getElementById('size-35').value, document.getElementById('color-35').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 36" data-size="S" data-color="Black">
+  <img src="images/tshirt36.jpg" alt="T-shirt 36" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 36</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-36" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-36" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(36, document.getElementById('size-36').value, document.getElementById('color-36').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 37" data-size="M" data-color="White">
+  <img src="images/tshirt37.jpg" alt="T-shirt 37" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 37</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-37" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-37" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(37, document.getElementById('size-37').value, document.getElementById('color-37').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 38" data-size="L" data-color="Blue">
+  <img src="images/tshirt38.jpg" alt="T-shirt 38" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 38</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-38" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-38" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(38, document.getElementById('size-38').value, document.getElementById('color-38').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 39" data-size="XL" data-color="Grey">
+  <img src="images/tshirt39.jpg" alt="T-shirt 39" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 39</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-39" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-39" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(39, document.getElementById('size-39').value, document.getElementById('color-39').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 40" data-size="S" data-color="Black">
+  <img src="images/tshirt40.jpg" alt="T-shirt 40" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 40</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-40" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-40" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(40, document.getElementById('size-40').value, document.getElementById('color-40').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 41" data-size="M" data-color="White">
+  <img src="images/tshirt41.jpg" alt="T-shirt 41" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 41</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-41" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-41" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(41, document.getElementById('size-41').value, document.getElementById('color-41').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 42" data-size="L" data-color="Blue">
+  <img src="images/tshirt42.jpg" alt="T-shirt 42" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 42</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-42" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-42" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(42, document.getElementById('size-42').value, document.getElementById('color-42').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 43" data-size="XL" data-color="Grey">
+  <img src="images/tshirt43.jpg" alt="T-shirt 43" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 43</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-43" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-43" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(43, document.getElementById('size-43').value, document.getElementById('color-43').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 44" data-size="S" data-color="Black">
+  <img src="images/tshirt44.jpg" alt="T-shirt 44" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 44</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-44" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-44" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(44, document.getElementById('size-44').value, document.getElementById('color-44').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 45" data-size="M" data-color="White">
+  <img src="images/tshirt45.jpg" alt="T-shirt 45" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 45</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-45" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-45" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(45, document.getElementById('size-45').value, document.getElementById('color-45').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 46" data-size="L" data-color="Blue">
+  <img src="images/tshirt46.jpg" alt="T-shirt 46" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 46</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-46" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-46" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(46, document.getElementById('size-46').value, document.getElementById('color-46').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 47" data-size="XL" data-color="Grey">
+  <img src="images/tshirt47.jpg" alt="T-shirt 47" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 47</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-47" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-47" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(47, document.getElementById('size-47').value, document.getElementById('color-47').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 48" data-size="S" data-color="Black">
+  <img src="images/tshirt48.jpg" alt="T-shirt 48" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 48</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-48" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-48" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(48, document.getElementById('size-48').value, document.getElementById('color-48').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 49" data-size="M" data-color="White">
+  <img src="images/tshirt49.jpg" alt="T-shirt 49" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 49</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-49" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-49" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(49, document.getElementById('size-49').value, document.getElementById('color-49').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 50" data-size="L" data-color="Blue">
+  <img src="images/tshirt50.jpg" alt="T-shirt 50" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 50</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-50" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-50" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(50, document.getElementById('size-50').value, document.getElementById('color-50').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 51" data-size="XL" data-color="Grey">
+  <img src="images/tshirt51.jpg" alt="T-shirt 51" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 51</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-51" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-51" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(51, document.getElementById('size-51').value, document.getElementById('color-51').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 52" data-size="S" data-color="Black">
+  <img src="images/tshirt52.jpg" alt="T-shirt 52" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 52</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-52" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-52" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(52, document.getElementById('size-52').value, document.getElementById('color-52').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 53" data-size="M" data-color="White">
+  <img src="images/tshirt53.jpg" alt="T-shirt 53" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 53</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-53" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-53" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(53, document.getElementById('size-53').value, document.getElementById('color-53').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 54" data-size="L" data-color="Blue">
+  <img src="images/tshirt54.jpg" alt="T-shirt 54" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 54</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-54" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-54" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(54, document.getElementById('size-54').value, document.getElementById('color-54').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 55" data-size="XL" data-color="Grey">
+  <img src="images/tshirt55.jpg" alt="T-shirt 55" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 55</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-55" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-55" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(55, document.getElementById('size-55').value, document.getElementById('color-55').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 56" data-size="S" data-color="Black">
+  <img src="images/tshirt56.jpg" alt="T-shirt 56" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 56</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-56" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-56" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(56, document.getElementById('size-56').value, document.getElementById('color-56').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 57" data-size="M" data-color="White">
+  <img src="images/tshirt57.jpg" alt="T-shirt 57" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 57</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-57" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-57" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(57, document.getElementById('size-57').value, document.getElementById('color-57').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 58" data-size="L" data-color="Blue">
+  <img src="images/tshirt58.jpg" alt="T-shirt 58" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 58</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-58" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-58" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(58, document.getElementById('size-58').value, document.getElementById('color-58').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 59" data-size="XL" data-color="Grey">
+  <img src="images/tshirt59.jpg" alt="T-shirt 59" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 59</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-59" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-59" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(59, document.getElementById('size-59').value, document.getElementById('color-59').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 60" data-size="S" data-color="Black">
+  <img src="images/tshirt60.jpg" alt="T-shirt 60" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 60</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-60" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-60" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(60, document.getElementById('size-60').value, document.getElementById('color-60').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 61" data-size="M" data-color="White">
+  <img src="images/tshirt61.jpg" alt="T-shirt 61" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 61</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-61" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-61" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(61, document.getElementById('size-61').value, document.getElementById('color-61').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 62" data-size="L" data-color="Blue">
+  <img src="images/tshirt62.jpg" alt="T-shirt 62" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 62</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-62" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-62" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(62, document.getElementById('size-62').value, document.getElementById('color-62').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 63" data-size="XL" data-color="Grey">
+  <img src="images/tshirt63.jpg" alt="T-shirt 63" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 63</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-63" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-63" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(63, document.getElementById('size-63').value, document.getElementById('color-63').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 64" data-size="S" data-color="Black">
+  <img src="images/tshirt64.jpg" alt="T-shirt 64" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 64</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-64" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-64" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(64, document.getElementById('size-64').value, document.getElementById('color-64').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 65" data-size="M" data-color="White">
+  <img src="images/tshirt65.jpg" alt="T-shirt 65" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 65</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-65" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-65" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(65, document.getElementById('size-65').value, document.getElementById('color-65').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 66" data-size="L" data-color="Blue">
+  <img src="images/tshirt66.jpg" alt="T-shirt 66" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 66</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-66" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-66" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(66, document.getElementById('size-66').value, document.getElementById('color-66').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 67" data-size="XL" data-color="Grey">
+  <img src="images/tshirt67.jpg" alt="T-shirt 67" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 67</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-67" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-67" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(67, document.getElementById('size-67').value, document.getElementById('color-67').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 68" data-size="S" data-color="Black">
+  <img src="images/tshirt68.jpg" alt="T-shirt 68" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 68</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-68" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-68" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(68, document.getElementById('size-68').value, document.getElementById('color-68').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 69" data-size="M" data-color="White">
+  <img src="images/tshirt69.jpg" alt="T-shirt 69" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 69</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-69" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-69" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(69, document.getElementById('size-69').value, document.getElementById('color-69').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 70" data-size="L" data-color="Blue">
+  <img src="images/tshirt70.jpg" alt="T-shirt 70" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 70</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-70" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-70" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(70, document.getElementById('size-70').value, document.getElementById('color-70').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 71" data-size="XL" data-color="Grey">
+  <img src="images/tshirt71.jpg" alt="T-shirt 71" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 71</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-71" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-71" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(71, document.getElementById('size-71').value, document.getElementById('color-71').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 72" data-size="S" data-color="Black">
+  <img src="images/tshirt72.jpg" alt="T-shirt 72" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 72</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-72" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-72" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(72, document.getElementById('size-72').value, document.getElementById('color-72').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 73" data-size="M" data-color="White">
+  <img src="images/tshirt73.jpg" alt="T-shirt 73" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 73</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-73" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-73" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(73, document.getElementById('size-73').value, document.getElementById('color-73').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 74" data-size="L" data-color="Blue">
+  <img src="images/tshirt74.jpg" alt="T-shirt 74" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 74</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-74" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-74" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(74, document.getElementById('size-74').value, document.getElementById('color-74').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 75" data-size="XL" data-color="Grey">
+  <img src="images/tshirt75.jpg" alt="T-shirt 75" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 75</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-75" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-75" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(75, document.getElementById('size-75').value, document.getElementById('color-75').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 76" data-size="S" data-color="Black">
+  <img src="images/tshirt76.jpg" alt="T-shirt 76" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 76</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-76" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-76" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(76, document.getElementById('size-76').value, document.getElementById('color-76').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 77" data-size="M" data-color="White">
+  <img src="images/tshirt77.jpg" alt="T-shirt 77" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 77</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-77" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-77" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(77, document.getElementById('size-77').value, document.getElementById('color-77').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 78" data-size="L" data-color="Blue">
+  <img src="images/tshirt78.jpg" alt="T-shirt 78" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 78</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-78" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-78" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(78, document.getElementById('size-78').value, document.getElementById('color-78').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 79" data-size="XL" data-color="Grey">
+  <img src="images/tshirt79.jpg" alt="T-shirt 79" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 79</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-79" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-79" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(79, document.getElementById('size-79').value, document.getElementById('color-79').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 80" data-size="S" data-color="Black">
+  <img src="images/tshirt80.jpg" alt="T-shirt 80" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 80</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-80" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-80" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(80, document.getElementById('size-80').value, document.getElementById('color-80').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 81" data-size="M" data-color="White">
+  <img src="images/tshirt81.jpg" alt="T-shirt 81" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 81</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-81" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-81" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(81, document.getElementById('size-81').value, document.getElementById('color-81').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 82" data-size="L" data-color="Blue">
+  <img src="images/tshirt82.jpg" alt="T-shirt 82" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 82</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-82" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-82" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(82, document.getElementById('size-82').value, document.getElementById('color-82').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 83" data-size="XL" data-color="Grey">
+  <img src="images/tshirt83.jpg" alt="T-shirt 83" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 83</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-83" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-83" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(83, document.getElementById('size-83').value, document.getElementById('color-83').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 84" data-size="S" data-color="Black">
+  <img src="images/tshirt84.jpg" alt="T-shirt 84" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 84</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-84" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-84" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(84, document.getElementById('size-84').value, document.getElementById('color-84').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 85" data-size="M" data-color="White">
+  <img src="images/tshirt85.jpg" alt="T-shirt 85" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 85</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-85" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-85" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(85, document.getElementById('size-85').value, document.getElementById('color-85').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 86" data-size="L" data-color="Blue">
+  <img src="images/tshirt86.jpg" alt="T-shirt 86" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 86</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-86" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-86" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(86, document.getElementById('size-86').value, document.getElementById('color-86').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 87" data-size="XL" data-color="Grey">
+  <img src="images/tshirt87.jpg" alt="T-shirt 87" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 87</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-87" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-87" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(87, document.getElementById('size-87').value, document.getElementById('color-87').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 88" data-size="S" data-color="Black">
+  <img src="images/tshirt88.jpg" alt="T-shirt 88" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 88</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-88" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-88" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(88, document.getElementById('size-88').value, document.getElementById('color-88').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 89" data-size="M" data-color="White">
+  <img src="images/tshirt89.jpg" alt="T-shirt 89" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 89</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-89" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-89" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(89, document.getElementById('size-89').value, document.getElementById('color-89').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 90" data-size="L" data-color="Blue">
+  <img src="images/tshirt90.jpg" alt="T-shirt 90" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 90</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-90" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-90" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(90, document.getElementById('size-90').value, document.getElementById('color-90').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 91" data-size="XL" data-color="Grey">
+  <img src="images/tshirt91.jpg" alt="T-shirt 91" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 91</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-91" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-91" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(91, document.getElementById('size-91').value, document.getElementById('color-91').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 92" data-size="S" data-color="Black">
+  <img src="images/tshirt92.jpg" alt="T-shirt 92" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 92</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-92" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-92" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(92, document.getElementById('size-92').value, document.getElementById('color-92').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 93" data-size="M" data-color="White">
+  <img src="images/tshirt93.jpg" alt="T-shirt 93" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 93</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-93" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-93" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(93, document.getElementById('size-93').value, document.getElementById('color-93').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 94" data-size="L" data-color="Blue">
+  <img src="images/tshirt94.jpg" alt="T-shirt 94" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 94</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-94" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-94" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(94, document.getElementById('size-94').value, document.getElementById('color-94').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 95" data-size="XL" data-color="Grey">
+  <img src="images/tshirt95.jpg" alt="T-shirt 95" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 95</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-95" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-95" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(95, document.getElementById('size-95').value, document.getElementById('color-95').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 96" data-size="S" data-color="Black">
+  <img src="images/tshirt96.jpg" alt="T-shirt 96" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 96</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-96" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-96" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(96, document.getElementById('size-96').value, document.getElementById('color-96').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 97" data-size="M" data-color="White">
+  <img src="images/tshirt97.jpg" alt="T-shirt 97" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 97</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: M, Color: White</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-97" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-97" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(97, document.getElementById('size-97').value, document.getElementById('color-97').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 98" data-size="L" data-color="Blue">
+  <img src="images/tshirt98.jpg" alt="T-shirt 98" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 98</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: L, Color: Blue</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-98" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-98" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(98, document.getElementById('size-98').value, document.getElementById('color-98').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 99" data-size="XL" data-color="Grey">
+  <img src="images/tshirt99.jpg" alt="T-shirt 99" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 99</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: XL, Color: Grey</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-99" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-99" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(99, document.getElementById('size-99').value, document.getElementById('color-99').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+<div class="product-card bg-white shadow rounded-xl p-4" data-name="KISO T-shirt 100" data-size="S" data-color="Black">
+  <img src="images/tshirt100.jpg" alt="T-shirt 100" class="w-full h-64 object-cover rounded-xl mb-2">
+  <h3 class="text-lg font-semibold">KISO T-shirt 100</h3>
+  <p class="text-sm text-gray-600 mb-2">Premium cotton. Size: S, Color: Black</p>
+  <div class="flex gap-2 mb-2">
+    <select id="size-100" class="border rounded p-1 text-sm">
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select id="color-100" class="border rounded p-1 text-sm">
+      <option>Black</option>
+      <option>White</option>
+      <option>Blue</option>
+      <option>Grey</option>
+    </select>
+  </div>
+  <button onclick="addToCart(100, document.getElementById('size-100').value, document.getElementById('color-100').value)"
+    class="bg-black text-white w-full py-1 rounded text-sm">Add to Cart</button>
+</div>
+
+</div>
+    
+<div class="max-w-xl mx-auto bg-white rounded-xl shadow p-4 mt-10">
+  <h2 class="text-xl font-bold mb-4">🛒 Your Cart</h2>
+  <div id="cartItems"></div>
+</div>
+
+    
+<div class="max-w-xl mx-auto mt-4">
+  <button onclick="showCheckout()" class="w-full bg-blue-600 text-white py-2 rounded">Buy Now</button>
+</div>
+
+    
+<div id="checkoutSection" class="max-w-xl mx-auto bg-white rounded-xl shadow p-4 mt-10 hidden">
+  <h2 class="text-xl font-bold mb-4">📦 Delivery Address</h2>
+  <form id="addressForm" class="space-y-4">
+    <input type="text" id="name" placeholder="Full Name" required class="w-full border rounded p-2" />
+    <input type="text" id="phone" placeholder="Phone Number" required class="w-full border rounded p-2" />
+    <input type="text" id="address" placeholder="Delivery Address" required class="w-full border rounded p-2" />
+    <input type="text" id="pincode" placeholder="PIN Code" required class="w-full border rounded p-2" />
+    <button type="button" onclick="proceedToPayment()" class="bg-black text-white w-full py-2 rounded">Proceed to Payment</button>
+  </form>
+</div>
+
+<div id="paymentSection" class="max-w-xl mx-auto bg-white rounded-xl shadow p-4 mt-10 hidden">
+  <h2 class="text-xl font-bold mb-4">💳 Payment</h2>
+  <p class="text-gray-600 mb-4">Select your payment method:</p>
+  <div class="space-y-2">
+    <label class="block"><input type="radio" name="payment" value="gpay" checked /> Google Pay</label>
+    <label class="block"><input type="radio" name="payment" value="phonepe" /> PhonePe</label>
+    <label class="block"><input type="radio" name="payment" value="paytm" /> Paytm</label>
+    <label class="block"><input type="radio" name="payment" value="card" /> Debit/Credit Card</label>
+    <label class="block opacity-50"><input type="radio" name="payment" value="cod" disabled /> Cash on Delivery (Disabled)</label>
+  </div>
+  <button onclick="showSuccess()" class="mt-4 bg-green-600 text-white w-full py-2 rounded">Pay & Confirm Order</button>
+</div>
+
+<div id="successSection" class="max-w-xl mx-auto bg-green-100 rounded-xl shadow p-4 mt-10 hidden">
+  <h2 class="text-xl font-bold text-green-700">🎉 Order Successful!</h2>
+  <p class="text-green-700 mt-2">Thank you for shopping with wearKISO. You'll receive updates on your order soon.</p>
+</div>
+
+  </div>
+  
+<script>
+function filterProducts() {
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+  const size = document.getElementById("sizeFilter").value;
+  const color = document.getElementById("colorFilter").value;
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach(product => {
+    const name = product.getAttribute("data-name").toLowerCase();
+    const productSize = product.getAttribute("data-size");
+    const productColor = product.getAttribute("data-color");
+
+    const matchesSearch = name.includes(searchInput);
+    const matchesSize = !size || productSize === size;
+    const matchesColor = !color || productColor === color;
+
+    if (matchesSearch && matchesSize && matchesColor) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+</script>
+
+  
+<script>
+let cart = [];
+
+function addToCart(id, size, color) {
+  const item = cart.find(p => p.id === id && p.size === size && p.color === color);
+  if (item) {
+    item.quantity++;
+  } else {
+    cart.push({ id, size, color, quantity: 1 });
+  }
+  renderCart();
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
+
+function changeQuantity(index, delta) {
+  cart[index].quantity += delta;
+  if (cart[index].quantity <= 0) {
+    removeFromCart(index);
+  } else {
+    renderCart();
+  }
+}
+
+function renderCart() {
+  const cartContainer = document.getElementById("cartItems");
+  cartContainer.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartContainer.innerHTML = "<p class='text-gray-600'>Cart is empty.</p>";
+    return;
+  }
+
+  cart.forEach((item, i) => {
+    cartContainer.innerHTML += `
+      <div class="flex justify-between items-center border-b py-2">
+        <div>
+          <p><strong>T-shirt ${item.id}</strong></p>
+          <p class="text-sm text-gray-500">Size: ${item.size}, Color: ${item.color}</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="changeQuantity(${i}, -1)" class="px-2 bg-gray-200">-</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQuantity(${i}, 1)" class="px-2 bg-gray-200">+</button>
+          <button onclick="removeFromCart(${i})" class="px-2 text-red-500">✕</button>
+        </div>
+      </div>
+    `;
+  });
+}
+</script>
+
+  
+<script>
+function showCheckout() {
+  if (cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+  document.getElementById("checkoutSection").classList.remove("hidden");
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+function proceedToPayment() {
+  document.getElementById("checkoutSection").classList.add("hidden");
+  document.getElementById("paymentSection").classList.remove("hidden");
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+function showSuccess() {
+  document.getElementById("paymentSection").classList.add("hidden");
+  document.getElementById("successSection").classList.remove("hidden");
+  window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
