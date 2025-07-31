@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>wearKISO - Premium Tees</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+
+
+<!-- Hero Section -->
+
+<section class="relative bg-cover bg-center h-[400px] flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x400/?fashion,model')">
+
+  <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0"></div>
+
+  <div class="relative z-10 text-center">
+
+    <h1 class="text-white text-5xl font-bold">wearKISO</h1>
+
+    <p class="text-gray-200 mt-2 text-xl">Minimalist Premium Tees for Every Mood</p>
+
+    <a href="#gallery" class="mt-4 inline-block bg-white text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">Shop Now</a>
+
+  </div>
+
+</section>
+
+
+
+<!-- About Section -->
+
+<section class="py-12 px-4 text-center bg-white">
+
+  <h2 class="text-3xl font-bold mb-4">About wearKISO</h2>
+
+  <p class="max-w-2xl mx-auto text-gray-700">
+
+    wearKISO brings you hand-picked, high-quality T-shirts designed with minimalism and comfort in mind. With in-house production and a focus on eco-friendly fabric, we deliver style, comfort, and class across India.
+
+  </p>
+
+</section>
+
+
+
+<!-- Gallery / Products Section -->
+
+<section id="gallery" class="py-12 px-4 bg-gray-100">
+
+  <h2 class="text-3xl font-bold text-center mb-8">Our Collection</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+
+    <!-- Repeatable Product Card -->
+
+    <script>
+
+      const products = [
+
+        { name: 'Black Minimal Tee', price: 699, image: 'https://source.unsplash.com/400x400/?tshirt,black' },
+
+        { name: 'White Basic Tee', price: 699, image: 'https://source.unsplash.com/400x400/?tshirt,white' },
+
+        { name: 'Olive Street Tee', price: 749, image: 'https://source.unsplash.com/400x400/?tshirt,olive' },
+
+        { name: 'Navy Drop Tee', price: 749, image: 'https://source.unsplash.com/400x400/?tshirt,navy' },
+
+        { name: 'Brown Raw Tee', price: 799, image: 'https://source.unsplash.com/400x400/?tshirt,brown' },
+
+        { name: 'Beige Chill Tee', price: 749, image: 'https://source.unsplash.com/400x400/?tshirt,beige' },
+
+        { name: 'Charcoal Core Tee', price: 799, image: 'https://source.unsplash.com/400x400/?tshirt,charcoal' }
+
+      ];
+
+    </script>
+
+
+
+    <div id="product-list" class="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+
+
+
+  </div>
+
+</section>
+
+
+
+<!-- Cart Page -->
+
+<section id="cart" class="py-12 px-4 hidden">
+
+  <h2 class="text-3xl font-bold text-center mb-4">Your Cart</h2>
+
+  <div id="cart-items" class="max-w-2xl mx-auto space-y-4"></div>
+
+  <div class="text-center mt-4">
+
+    <p class="font-semibold text-xl">Total: ₹<span id="cart-total">0</span></p>
+
+    <button onclick="checkout()" class="mt-4 px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700">Proceed to Address</button>
+
+  </div>
+
+</section>
+
+
+
+<!-- Address Form -->
+
+<section id="address" class="py-12 px-4 hidden">
+
+  <h2 class="text-3xl font-bold text-center mb-4">Shipping Address</h2>
+
+  <form onsubmit="return showPayment(event)" class="max-w-xl mx-auto bg-white p-6 shadow-md rounded">
+
+    <input type="text" placeholder="Full Name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+
+    <input type="text" placeholder="Phone Number" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+
+    <textarea placeholder="Full Address" required class="w-full mb-4 p-2 border border-gray-300 rounded"></textarea>
+
+    <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Continue to Payment</button>
+
+  </form>
+
+</section>
+
+
+
+<!-- Payment Section -->
+
+<section id="payment" class="py-12 px-4 hidden">
+
+  <h2 class="text-3xl font-bold text-center mb-4">Payment Method</h2>
+
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow space-y-4">
+
+    <label><input type="radio" name="pay" required> Google Pay</label><br>
+
+    <label><input type="radio" name="pay"> PhonePe</label><br>
+
+    <label><input type="radio" name="pay"> Paytm</label><br>
+
+    <label><input type="radio" name="pay"> Card</label><br>
+
+    <label><input type="radio" name="pay"> Cash on Delivery</label>
+
+    <button onclick="orderSuccess()" class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Place Order</button>
+
+  </div>
+
+</section>
+
+
+
+<!-- Success Page -->
+
+<section id="success" class="py-16 px-4 hidden text-center">
+
+  <h2 class="text-3xl font-bold mb-4 text-green-700">Thank You for Your Order!</h2>
+
+  <p class="text-gray-700">We’ve received your order. You’ll receive updates via WhatsApp and email.</p>
+
+</section>
+
+
+
+<!-- Contact & Review Section -->
+
+<section class="py-12 px-4 text-center bg-white">
+
+  <h2 class="text-2xl font-bold mb-2">Need Help?</h2>
+
+  <p>📞 <a href="tel:7671081520" class="text-blue-600">7671081520</a></p>
+
+  <p>📧 <a href="mailto:wearkiso@gmail.com" class="text-blue-600">wearkiso@gmail.com</a></p>
+
+  <p>💬 <a href="https://wa.me/7671081520" class="text-green-600">Chat on WhatsApp</a></p>
+
+</section>
+
+
+
+<section class="py-12 px-4 bg-gray-100 text-center">
+
+  <h2 class="text-2xl font-bold mb-2">Return Policy</h2>
+
+  <p class="text-gray-700 max-w-xl mx-auto">7-day easy return. No questions asked. We prioritize your comfort and satisfaction.</p>
+
+</section>
+
+
+
+<section class="py-12 px-4 bg-white text-center">
+
+  <h2 class="text-2xl font-bold mb-4">Customer Ratings</h2>
+
+  <div class="max-w-xl mx-auto">
+
+    ⭐⭐⭐⭐☆ (4.5/5)
+
+    <p class="text-gray-600 mt-2 italic">“Super comfy and minimal design. Totally worth it!”</p>
+
+  </div>
+
+</section>
+
+
+
+<script>
+
+  const productList = document.getElementById('product-list');
+
+  const cartItems = [];
+
+
+
+  products.forEach((product, index) => {
+
+    const card = document.createElement('div');
+
+    card.className = 'bg-white shadow-md rounded-xl overflow-hidden p-4';
+
+    card.innerHTML = `
+
+      <img class="w-full h-64 object-cover" src="${product.image}" alt="${product.name}">
+
+      <h3 class="text-xl font-bold mt-2">${product.name}</h3>
+
+      <p class="text-gray-600 mb-2">₹${product.price}</p>
+
+      <label>Size:
+
+        <select id="size-${index}" class="w-full mb-2 border p-1 rounded">
+
+          <option>Small</option>
+
+          <option>Medium</option>
+
+          <option>Large</option>
+
+          <option>XL</option>
+
+        </select>
+
+      </label>
+
+      <label>Color:
+
+        <select id="color-${index}" class="w-full mb-2 border p-1 rounded">
+
+          <option>Black</option>
+
+          <option>White</option>
+
+          <option>Olive</option>
+
+          <option>Beige</option>
+
+        </select>
+
+      </label>
+
+      <div class="flex gap-2">
+
+        <button onclick="addToCart(${index})" class="bg-gray-900 text-white px-4 py-1 rounded hover:bg-gray-800">Add to Cart</button>
+
+        <button onclick="buyNow(${index})" class="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700">Buy Now</button>
+
+      </div>
+
+    `;
+
+    productList.appendChild(card);
+
+  });
+
+
+
+  function addToCart(index) {
+
+    const size = document.getElementById(size-${index}).value;
+
+    const color = document.getElementById(color-${index}).value;
+
+    const existing = cartItems.find(item => item.index === index && item.size === size && item.color === color);
+
+    if (existing) {
+
+      existing.qty++;
+
+    } else {
+
+      cartItems.push({ ...products[index], index, size, color, qty: 1 });
+
+    }
+
+    alert('Added to cart');
+
+    showCart();
+
+  }
+
+
+
+  function buyNow(index) {
+
+    addToCart(index);
+
+    document.getElementById('gallery').classList.add('hidden');
+
+    document.getElementById('cart').classList.remove('hidden');
+
+  }
+
+
+
+  function showCart() {
+
+    document.getElementById('cart-items').innerHTML = '';
+
+    let total = 0;
+
+    cartItems.forEach((item, I) => {
+
+      total += item.price * item.qty;
+
+      const div = document.createElement('div');
+
+      div.className = 'flex justify-between items-center border p-2 rounded';
+
+      div.innerHTML = `
+
+        <div>
+
+          <p class="font-semibold">${item.name}</p>
+
+          <p class="text-sm">Size: ${item.size}, Color: ${item.color}</p>
+
+          <p class="text-sm">Qty: ${item.qty}</p>
+
+        </div>
+
+        <button onclick="removeItem(${I})" class="text-red-600">Remove</button>
+
+      `;
+
+      document.getElementById('cart-items').appendChild(div);
+
+    });
+
+    document.getElementById('cart-total').innerText = total;
+
+  }
+
+
+
+  function removeItem(I) {
+
+    cartItems.splice(I, 1);
+
+    showCart();
+
+  }
+
+
+
+  function checkout() {
+
+    document.getElementById('cart').classList.add('hidden');
+
+    document.getElementById('address').classList.remove('hidden');
+
+  }
+
+
+
+  function showPayment(e) {
+
+    e.preventDefault();
+
+    document.getElementById('address').classList.add('hidden');
+
+    document.getElementById('payment').classList.remove('hidden');
+
+  }
+
+
+
+  function orderSuccess() {
+
+    document.getElementById('payment').classList.add('hidden');
+
+    document.getElementById('success').classList.remove('hidden');
+
+  }
+
+</script>
+
+
+
+</body>
+
+</html>
